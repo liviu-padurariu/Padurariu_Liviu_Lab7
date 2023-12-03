@@ -34,6 +34,9 @@ namespace Padurariu_Liviu_Lab7.Data
                 return _database.InsertAsync(shop);
             }
         }
+        public Task<int> DeleteShopAsync(Shop shop) {
+            return _database.DeleteAsync(shop);
+        }
         public Task<int> SaveProductAsync(Product product)
         {
             if (product.ID != 0)
